@@ -1,0 +1,69 @@
+body {
+  margin: 0px;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 1fr 6fr;
+}
+
+.dashboard {
+  grid-column: 1 / 3;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+.dashboard > .nav {
+  background-color: rgb(59, 131, 240);
+  padding-left: 20px;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+}
+.dashboard > .nav > .button > img {
+  margin-right: 16px;
+}
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.search-container,
+.user-container {
+  display: flex;
+  gap: 30px;
+  font-size: 25px;
+}
+.searchbar,
+input:focus {
+  /* :focus doesn't work? */
+  width: max(300px, 40vw);
+  background-color: lightgray;
+  border-radius: 8px;
+  border-style: none;
+}
+
+.container > .nav {
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+  background-color: rgb(59, 131, 240);
+  text-align: left;
+  padding-left: 20px;
+}
+.button > img {
+  margin-right: 20px;
+}
+.button > a {
+  font-size: 32px;
+}
+a:visited,
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+/* Next, do .profile-header */
