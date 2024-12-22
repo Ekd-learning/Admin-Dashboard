@@ -14,7 +14,7 @@ body {
   grid-column: 1 / 3;
   background-color: white;
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: minmax(240px, 1fr) minmax(80vw, 5fr);
 }
 .dashboard > .nav {
   background-color: rgb(59, 131, 240);
@@ -22,6 +22,7 @@ body {
   font-size: 40px;
   display: flex;
   align-items: center;
+  min-width: 240px;
 }
 .dashboard > .nav > .button > img {
   margin-right: 16px;
@@ -53,6 +54,7 @@ input:focus {
   background-color: rgb(59, 131, 240);
   text-align: left;
   padding-left: 20px;
+  min-width: 240px;
 }
 .button > img {
   margin-right: 20px;
@@ -66,4 +68,73 @@ a:link {
   text-decoration: none;
 }
 
-/* Next, do .profile-header */
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 20px;
+  box-shadow: 0px 5px 0px darkgray;
+}
+.profile-container {
+  display: flex;
+  gap: 20px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.buttons-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 50px;
+}
+button {
+  background-color: rgb(59, 131, 240);
+  width: 5vw;
+  height: 5vh;
+  border-radius: 32px;
+  font-size: 24px;
+  font-weight: 600;
+  min-width: 100px;
+  min-height: 40px;
+}
+
+.profile-page {
+  background-color: lightgray;
+}
+
+.cards_and_text_container {
+  padding: 40px;
+}
+
+.profile-page p {
+  font-size: 32px;
+  font-weight: 800;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(20vh, 1fr));
+  gap: 20px;
+  /* padding: 40px; */
+}
+.card {
+  background-color: orange;
+  border-radius: 16px;
+  padding-left: 20px;
+}
+.text-container {
+  background-color: white;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  padding: 20px;
+  /* display: flex;
+  flex-direction: column; */
+}
+.card {
+  font-weight: 600;
+  font-size: 36px;
+  display: flex;
+}
+.card p {
+  font-weight: 400;
+  font-size: 24px;
+}
